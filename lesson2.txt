@@ -1,0 +1,127 @@
+ls09:36:55 ruby-2.1.2 on {master} ~$ ls -al ~/.ssh
+total 20
+drwx------  2 ubuntu ubuntu 4096 iul  8 14:52 .
+drwxr-xr-x 33 ubuntu ubuntu 4096 iul  9 09:33 ..
+-rw-------  1 ubuntu ubuntu 1675 iul  7 17:16 id_rsa
+-rw-r--r--  1 ubuntu ubuntu  406 iul  7 17:16 id_rsa.pub
+-rw-r--r--  1 ubuntu ubuntu 2652 iul  8 14:57 known_hosts
+09:37:04 ruby-2.1.2 on {master} ~$ sudo apt-get install xclip
+[sudo] password for ubuntu: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+xclip is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 89 not upgraded.
+09:37:41 ruby-2.1.2 on {master} ~$ xclip -sel clip < ~/.ssh/id_rsa.pub
+09:38:11 ruby-2.1.2 on {master} ~$ ls -al ~/.ssh
+total 20
+drwx------  2 ubuntu ubuntu 4096 iul  8 14:52 .
+drwxr-xr-x 33 ubuntu ubuntu 4096 iul  9 09:33 ..
+-rw-------  1 ubuntu ubuntu 1675 iul  7 17:16 id_rsa
+-rw-r--r--  1 ubuntu ubuntu  406 iul  7 17:16 id_rsa.pub
+-rw-r--r--  1 ubuntu ubuntu 2652 iul  8 14:57 known_hosts
+09:40:21 ruby-2.1.2 on {master} ~$ sudo apt-get install xclip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+xclip is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 89 not upgraded.
+09:40:39 ruby-2.1.2 on {master} ~$ xclip -sel clip < ~/.ssh/id_rsa.pub
+09:40:45 ruby-2.1.2 on {master} ~$ gedit ~/.ssh/id_rsa.pub
+^C
+09:43:37 ruby-2.1.2 on {master} ~$ ssh -T git@github.com
+Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+Hi RalucaDiana! You've successfully authenticated, but GitHub does not provide shell access.
+09:43:55 ruby-2.1.2 on {master} ~$ git clone git@github.com:RalucaDiana/09Iulie.git
+Cloning into '09Iulie'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+04:03:43 ruby-2.1.2 on {master} ~$ ls
+09Iulie       Desktop           Java_Applications  Public            Videos
+Applications  Documents         Music              rails_projects    www
+comics.txt    Downloads         Pictures           SortingAlgosRuby
+config.hgrc   examples.desktop  projects           Templates
+04:04:21 ruby-2.1.2 on {master} ~$ cd  Desktop
+04:04:53 ruby-2.1.2 on {master} ~/Desktop$ ls
+heap_team  Lesson.txt  me  ri20min.rb  ri20min.rb~
+04:04:55 ruby-2.1.2 on {master} ~/Desktop$ mv  Lesson.txt  09Iulie
+04:05:54 ruby-2.1.2 on {master} ~/Desktop$ cd 09Iulie
+-bash: cd: 09Iulie: Not a directory
+04:06:04 ruby-2.1.2 on {master} ~/Desktop$ cd ~
+04:06:08 ruby-2.1.2 on {master} ~$ ls
+09Iulie       Desktop           Java_Applications  Public            Videos
+Applications  Documents         Music              rails_projects    www
+comics.txt    Downloads         Pictures           SortingAlgosRuby
+config.hgrc   examples.desktop  projects           Templates
+04:06:11 ruby-2.1.2 on {master} ~$ mv Lesson.txt ~/ubuntu/09Iulie
+mv: cannot stat ‘Lesson.txt’: No such file or directory
+04:06:55 ruby-2.1.2 on {master} ~$ cd `
+> ^C
+04:07:09 ruby-2.1.2 on {master} ~$ cd ~
+04:07:10 ruby-2.1.2 on {master} ~$ ls
+09Iulie       Desktop           Java_Applications  Public            Videos
+Applications  Documents         Music              rails_projects    www
+comics.txt    Downloads         Pictures           SortingAlgosRuby
+config.hgrc   examples.desktop  projects           Templates
+04:07:12 ruby-2.1.2 on {master} ~$ cd Desktop
+04:07:31 ruby-2.1.2 on {master} ~/Desktop$ mv Lesson.txt ~/09Iulie
+mv: cannot stat ‘Lesson.txt’: No such file or directory
+04:07:45 ruby-2.1.2 on {master} ~/Desktop$ ls
+09Iulie  heap_team  me  ri20min.rb  ri20min.rb~
+04:07:53 ruby-2.1.2 on {master} ~/Desktop$ ls
+09Iulie  heap_team  me  ri20min.rb  ri20min.rb~
+04:09:26 ruby-2.1.2 on {master} ~/Desktop$ cp 09Iulie ~/09Iulie/
+04:09:46 ruby-2.1.2 on {master} ~/Desktop$ ls
+09Iulie  heap_team  me  ri20min.rb  ri20min.rb~
+04:09:47 ruby-2.1.2 on {master} ~/Desktop$ rm -rf 09Iulie 
+04:09:52 ruby-2.1.2 on {master} ~/Desktop$ cd ~/09Iulie/
+04:09:58 ruby-2.1.2 on {master} ~/09Iulie$ ls
+09Iulie
+04:10:00 ruby-2.1.2 on {master} ~/09Iulie$ mv 09Iulie.txt lesson.txt
+mv: cannot stat ‘09Iulie.txt’: No such file or directory
+04:10:22 ruby-2.1.2 on {master} ~/09Iulie$ mv 09Iulie lesson.txt
+04:10:29 ruby-2.1.2 on {master} ~/09Iulie$ ls
+lesson.txt
+04:10:33 ruby-2.1.2 on {master} ~/09Iulie$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	lesson.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+04:12:30 ruby-2.1.2 on {master} ~/09Iulie$ git add lesson.txt 
+04:12:46 ruby-2.1.2 on {master} ~/09Iulie$ git checkout -b "
+> Ral^C
+04:13:22 ruby-2.1.2 on {master} ~/09Iulie$ git checkout -b "Ralu"
+Switched to a new branch 'Ralu'
+04:13:27 ruby-2.1.2 on {Ralu} ~/09Iulie$ git status
+On branch Ralu
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   lesson.txt
+
+04:13:34 ruby-2.1.2 on {Ralu} ~/09Iulie$ git add lesson.txt 
+04:13:47 ruby-2.1.2 on {Ralu} ~/09Iulie$ git commit "Lectia de azi"
+error: pathspec 'Lectia de azi' did not match any file(s) known to git.
+04:14:15 ruby-2.1.2 on {Ralu} ~/09Iulie$ git commit -m "Lectia de azi"
+[Ralu (root-commit) d235d98] Lectia de azi
+ 1 file changed, 505 insertions(+)
+ create mode 100644 lesson.txt
+04:14:31 ruby-2.1.2 on (Ralu) ~/09Iulie$ git push origin Ralu
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 3.80 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:RalucaDiana/09Iulie.git
+ * [new branch]      Ralu -> Ralu
+04:14:51 ruby-2.1.2 on (Ralu) ~/09Iulie$ 
+
