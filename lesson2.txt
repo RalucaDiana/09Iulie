@@ -123,5 +123,114 @@ Writing objects: 100% (3/3), 3.80 KiB | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To git@github.com:RalucaDiana/09Iulie.git
  * [new branch]      Ralu -> Ralu
-04:14:51 ruby-2.1.2 on (Ralu) ~/09Iulie$ 
+04:14:51 ruby-2.1.2 on (Ralu) ~/09Iulie$ git add lesson2.txt
+04:19:21 ruby-2.1.2 on {Ralu} ~/09Iulie$ git commit -m "Lectia 2"
+[Ralu 584b6d8] Lectia 2
+ 1 file changed, 127 insertions(+)
+ create mode 100644 lesson2.txt
+04:19:34 ruby-2.1.2 on (Ralu) ~/09Iulie$ git push origin Ralu
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.86 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:RalucaDiana/09Iulie.git
+   d235d98..584b6d8  Ralu -> Ralu
+04:19:44 ruby-2.1.2 on (Ralu) ~/09Iulie$ git checkout -b master
+Switched to a new branch 'master'
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+04:24:58 ruby-2.1.2 on (master) ~/09Iulie$ git branch
+  Ralu
+* master
+04:25:12 ruby-2.1.2 on (master) ~/09Iulie$ git pull origin master
+fatal: Couldn't find remote ref master
+04:26:07 ruby-2.1.2 on (master) ~/09Iulie$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
 
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+04:26:32 ruby-2.1.2 on (master) ~/09Iulie$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:RalucaDiana/09Iulie.git
+ * [new branch]      master -> master
+04:27:17 ruby-2.1.2 on (master) ~/09Iulie$ git checkout Ralu
+Switched to branch 'Ralu'
+04:27:47 ruby-2.1.2 on (Ralu) ~/09Iulie$ gedit lesson.txt
+04:27:56 ruby-2.1.2 on (Ralu) ~/09Iulie$ git status
+On branch Ralu
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   lesson.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	lesson.txt~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+04:28:19 ruby-2.1.2 on {Ralu} ~/09Iulie$ git add .
+04:28:26 ruby-2.1.2 on {Ralu} ~/09Iulie$ git commit -m "buna"
+[Ralu 25615d8] buna
+ 2 files changed, 506 insertions(+), 1 deletion(-)
+ create mode 100644 lesson.txt~
+04:28:33 ruby-2.1.2 on (Ralu) ~/09Iulie$ git push origin Ralu
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 335 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:RalucaDiana/09Iulie.git
+   584b6d8..25615d8  Ralu -> Ralu
+04:29:48 ruby-2.1.2 on (Ralu) ~/09Iulie$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+04:30:06 ruby-2.1.2 on (master) ~/09Iulie$ git pull origin master
+Warning: Permanently added the RSA host key for IP address '192.30.252.129' to the list of known hosts.
+From github.com:RalucaDiana/09Iulie
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+04:30:43 ruby-2.1.2 on (master) ~/09Iulie$ git merge Ralu
+Updating 584b6d8..25615d8
+Fast-forward
+ lesson.txt  |   2 +-
+ lesson.txt~ | 505 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 506 insertions(+), 1 deletion(-)
+ create mode 100644 lesson.txt~
+04:30:58 ruby-2.1.2 on (master) ~/09Iulie$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:RalucaDiana/09Iulie.git
+   584b6d8..25615d8  master -> master
+04:32:24 ruby-2.1.2 on (master) ~/09Iulie$ 
+
+offf
